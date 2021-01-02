@@ -9,6 +9,7 @@ import { HeroesComponent } from './component/heroes/heroes.component';
 import { APP_ROUTING } from './app.routes';
 import { HeroesService } from './services/heroes.service';
 import { HeroeComponent } from './component/heroe/heroe.component';
+import { BuscarComponent } from './component/buscar/buscar.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HeroeComponent } from './component/heroe/heroe.component';
     AboutComponent,
     HeroesComponent,
     HeroeComponent,
+    BuscarComponent,
   ],
   imports: [BrowserModule, APP_ROUTING],
   providers: [HeroesService],

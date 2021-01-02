@@ -70,4 +70,23 @@ export class HeroesService {
   getHeroe(idx: number) {
     return this.heroes[idx];
   }
+
+  buscarHeroes(busqueda: string): IHeroe[] {
+    let heroesArreglo: IHeroe[] = [];
+
+    busqueda = busqueda.toLowerCase();
+    //Functional programming
+    heroesArreglo = this.heroes.filter((element) =>
+      element.nombre.toLowerCase().includes(busqueda)
+    );
+
+    // for (let heroe of this.heroes) {
+    //   let nombre = heroe.nombre.toLowerCase();
+    //   if (nombre.indexOf(busqueda) >= 0) {
+    //     heroesArreglo.push(heroe);
+    //   }
+    // }
+
+    return heroesArreglo;
+  }
 }
