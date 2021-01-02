@@ -1,0 +1,73 @@
+import { Injectable } from '@angular/core';
+import { IHeroe } from '../models/heroe.model';
+
+@Injectable()
+export class HeroesService {
+  private heroes: IHeroe[] = [
+    {
+      nombre: 'Iron Man',
+      bio:
+        'Iron Man (conocido en español como El Hombre de Hierro) es un superhéroe ficticio que aparece en los cómics estadounidenses publicados por Marvel Comics. El personaje fue cocreado por el escritor y editor Stan Lee, desarrollado por el guionista Larry Lieber y diseñado por los artistas Don Heck y Jack Kirby. Hizo su primera aparición en Tales of Suspense #39 (marzo de 1963), y recibió su propio título en Iron Man #1 (mayo de 1968).',
+      img: 'assets/img/ironman.png',
+      aparicion: '1941-06-23',
+      enemigo: 'Dr Malito',
+    },
+    {
+      nombre: 'Capitan America',
+      bio:
+        'El Capitán América, cuyo nombre real es Steven Grant Rogers, es un superhéroe ficticio que aparece en los cómics estadounidenses publicados por Marvel Comics. Creado por los historietistas Joe Simon y Jack Kirby, el personaje apareció por primera vez en Captain America Comics #1 (marzo de 1941) de Timely Comics, predecesor de Marvel Comics. El Capitán América fue diseñado como un supersoldado patriota que luchaba frecuentemente contra las potencias del Eje en la Segunda Guerra Mundial, y fue el personaje más popular de Timely Comics durante el período de guerra',
+      img: 'assets/img/america.png',
+      aparicion: '1953-11-03',
+      enemigo: 'Red Bone',
+    },
+    {
+      nombre: 'Ant Man',
+      bio:
+        'Ant-Man (Hombre Hormiga en algunas traducciones al español) es el nombre de varios superhéroes ficticios que aparecen en libros publicados por Marvel Comics. Creado por Stan Lee, Larry Lieber y Jack Kirby, la primera aparición de Ant-Man fue en el número 27 de Tales to Astonish (de enero de 1962). El personaje era originalmente el sobrenombre del superhéroe científico brillante Hank Pym, después de haber inventado una sustancia que puede hacer que la persona cambie de tamaño.',
+      img: 'assets/img/antman.png',
+      aparicion: '1962-01-15',
+      enemigo: 'Thanos',
+    },
+    {
+      nombre: 'Batman',
+      bio:
+        'La identidad secreta de Batman es Bruce Wayne (Bruno Díaz en algunos países de habla hispana), un multimillonario magnate empresarial y filántropo dueño de Empresas Wayne en Gotham City. Después de presenciar el asesinato de sus padres, el Dr. Thomas Wayne y Martha Wayne en un violento y fallido asalto cuando era niño, juró venganza contra los criminales, un juramento moderado por el sentido de la justicia. Bruce Wayne se entrena física e intelectualmente y crea un traje inspirado en los murciélagos para combatir el crimen, con sus gadgets de combate del batcinturón y sus vehículos.',
+      img: 'assets/img/batman.png',
+      aparicion: '1939-03-29',
+      enemigo: 'The Joker',
+    },
+    {
+      nombre: 'Flash',
+      bio:
+        'Flash (conocido también como The Flash) es el nombre de varios superhéroes ficticios que aparecen en los cómics estadounidenses publicados por DC Comics. Creado por el escritor Gardner Fox y el artista Harry Lampert, el Flash original apareció por primera vez en Flash Comics #1.​ Apodado el Corredor Escarlata, todas las encarnaciones del Flash poseen súper velocidad, que incluye la capacidad de correr, moverse y pensar extremadamente rápido, también puede atravesar la materia sólida, usar reflejos sobrehumanos y aparentemente violar ciertas leyes de la física, como superar la velocidad de la luz.',
+      img: 'assets/img/flash.png',
+      aparicion: '1949-05-07',
+      enemigo: 'Pied Piper',
+    },
+    {
+      nombre: 'Spiderman',
+      bio:
+        'Spider-Man (llamado Hombre Araña en muchas de las traducciones al español) es un superhéroe ficticio creado por los escritores y editores Stan Lee y Steve Ditko. Apareció por primera vez en el cómic de antología Amazing Fantasy # 15, en la Edad de Plata de los cómics. Aparece en los cómics estadounidenses publicados por Marvel Comics, así como en varias películas, programas de televisión y adaptaciones de videojuegos ambientadas en el Universo Marvel. En las historias, Spider-Man es el alias de Peter Parker, un huérfano criado por su tía May y su tío Ben en la Ciudad de Nueva York después de que sus padres Richard y Mary Parker murieron en un accidente aéreo.',
+      img: 'assets/img/spiderman.png',
+      aparicion: '1962-10-02',
+      enemigo: 'Pied Piper',
+    },
+    {
+      nombre: 'Thanos',
+      bio:
+        'Thanos es un supervillano ficticio que aparece en los cómics estadounidenses publicados por Marvel Comics. Creado por el escritor y artista Jim Starlin el personaje apareció por primera vez en The Invincible Iron Man # 55. Su nombre es en parte un juego de palabras que hace referencia al término griego Θάνατος (Thánatos), que significa muerte, pero principalmente es una deformación del nombre del dios de la muerte no violenta, Tánatos',
+      img: 'assets/img/thanos.png',
+      aparicion: '1973-02-07',
+      enemigo: 'Todo los heroes',
+    },
+  ];
+  constructor() {}
+
+  getHeroes(): IHeroe[] {
+    return this.heroes;
+  }
+
+  getHeroe(idx: number) {
+    return this.heroes[idx];
+  }
+}
